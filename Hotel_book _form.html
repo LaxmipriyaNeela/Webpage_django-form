@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Login</title>
+</head>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+section{
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+    background-image: url("bea4.jpg");
+    background-size: cover;
+	color: black;
+}
+section .div1{
+	border: 1px solid white;
+	width: 30%;
+	height: 80%;
+	border-radius: 5px;
+	overflow:auto;
+	background-color: white;
+	border-radius: 50px;
+	    -moz-box-shadow: inset 0 0 20px grey;
+	    -webkit-box-shadow:inset 0 0 20px grey;
+	    box-shadow: inset 0 0 20px black;
+}
+form{
+	align-content: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+.user,.mail,.pass{
+	width: 70%;
+	border: none;
+	height: 15px;
+	padding: 15px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	margin-top: 20px;
+	background-color: white;
+	border-bottom: 1px solid grey;
+	color: black;
+}
+.button{
+	margin-top: 35px;
+	width: 60%;
+	height: 35px;
+    color: white;
+    background-image: linear-gradient(to left,#ff0157,#990099,#00cccc);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+}
+h2{
+	margin-top: 25px;
+}
+</style>
+<script type="text/javascript">
+	function validation()
+	{
+		var N,E,P,B,A,x;
+		N=document.getElementById('Name').value;
+		E=document.getElementById('Email').value;
+		P=document.getElementById('PhoneNumber').value;
+		B=document.getElementById('BookingDate').value;
+		A=document.getElementById('Aadhar').value;
+		if(N=="" || E=="" || P=="" || B=="" || A=="")
+			alert("Please fill all the details for Registration");
+		else
+			alert("Your Registration is Successful");
+	}
+	function validate(mail){
+        var x=/^[a-zA-Z]+\w*\W*@\w*\W*\.(com|co\.in|co\.uk)$/
+        if (mail.match(x)){
+            alert("Valid Email.")
+        }
+        else{ alert("Invalid Email")}}
+
+	function focusFunction(x) {
+        x.style.background="#00FF00";
+    }
+
+    function blurFunction(y) {
+        // No focus = Changes the background color of input to red
+       y.style.background="	#00FFFF";
+	}
+	var i = 1;
+	function add1() {
+        i++;
+        var div = document.createElement('div');
+        var id = i;
+        div.innerHTML = 'Amenity' + id + ': <input type="text" name="Amenity' + id + '"/>' + ' <input type="button" id="add_button' + id + '" onclick="add()" value="add" />' + ' <input type="button" id="remove_button' + id + '" onclick="remove(this)" value="remove" />';
+        // document.getElementById('kurkure').style.height="id";
+		document.getElementById('content').appendChild(div);
+    }
+
+    function remove(div) {
+        document.getElementById('content').removeChild(div.parentNode);
+        i--;
+    }
+
+    
+</script>
+<body>
+<section id="kurkure">
+	<div class="div1">
+		<h2>Registration</h2>
+		<form>
+			<input id="Name" type="text" placeholder="Full Name" class="user" onfocus="focusFunction(document.getElementById('Name'))" 
+			onblur="blurFunction(document.getElementById('Name'))" required /><br>
+			<input id="Email" type="text" placeholder="Email ID" class="mail" onfocus="focusFunction(document.getElementById('Email'))" 
+			onblur="blurFunction(document.getElementById('Email'))" required  onmouseout="validate(document.getElementById('Email').value)"/><br>
+			<input id="PhoneNumber" type="Number" placeholder="Phone Number" class="user" min="10" onfocus="focusFunction(document.getElementById('PhoneNumber'))" 
+			onblur="blurFunction(document.getElementById('PhoneNumber'))" required /><br>
+			<input id="BookingDate" type="Date" placeholder="Booking Date(DD/MM/YY)" class="pass" onfocus="focusFunction(document.getElementById('BookingDate'))" 
+			onblur="blurFunction(document.getElementById('BookingDate'))" required /><br>
+			<input id="Aadhar" type="Number" placeholder="Aadhar Card" class="user" onfocus="focusFunction(document.getElementById('Aadhar'))" 
+			onblur="blurFunction(document.getElementById('Aadhar'))" required /><br><br>
+			<input type="file"><br><br>
+			<font color="red">*</font>please add the aadhar card in PDF format.
+			<!-- <input id="Amenities" type="text" placeholder="Amenities" class="Amenities" onfocus="focusFunction(document.getElementById('Amenities'))" 
+			onblur="blurFunction(document.getElementById('Amenities'))"   value="add" required /><br>>
+                   <div id="content"> <button id="add_button" onclick="add()">add</button> </div> -->
+				<!-- Amenities
+				<input type="text" name="child_1">
+				<input type="button" id="add_button" onclick="add()" value="add" /><br></br>
+			</div> -->
+			<div id="content">
+                    
+				<input type="text" placeholder="amenities" name="child_1">
+				<input type="button" id="add_button"  onclick="add1()" value="add" /><br></br>
+			</div>
+			<!-- <input type="file"><br><br>
+			<font color="red">*</font>please add the aadhar card in PDF format. -->
+			<input id="submit" type="submit" value="Register" class="button" onclick="validation()" onfocus="focusFunction(document.getElementById('submit'))" 
+			onblur="blurFunction(document.getElementById('submit'))" required /><br>
+		</form>
+	</div>
+</section>
+</body>
+</html>

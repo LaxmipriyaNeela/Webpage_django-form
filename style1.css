@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Martin',serif;
+}
+.Title{
+    width:100%;
+    height:50px;
+    background-color:white;
+    background-position : center;
+    background-size: cover;
+    position:relative;  
+    
+
+}
+.logo{
+    position: fixed;
+    top:5px;
+    height:95px;
+}
+.Pnumber{
+    text-align:right;
+    font-family:'Martel',serif;
+    font-size: 26px;
+    position:fixed;
+    top:50px;
+    right:50px;
+    color:#007DB9;
+}
+.menu{
+    text-align:left;
+    font-style:"cinzel";
+    font-size:20px;
+    position:relative;
+    top:100px;
+    left:25px;
+}
+.menu a{
+    text-decoration: none;
+    color: #666;
+    font-style:unset;
+}
+.menu a::after{
+    content:'';
+    width:0%;
+    height:50px;
+    background:#f44336;
+    transition: 0.5s;
+}
+.menu a:hover::after{
+    width:100%;
+    color: #f44336;
+}
+
+#a:hover{
+    color:#f44336;
+    
+}
+
+
+
+.flogo{
+    position:relative;
+    top:15px;
+    cursor: pointer;
+}
+.slogo{
+    position:relative;
+    top:15px;
+    cursor: pointer;
+}
+/* .tlogo{
+    position:relative;
+    top:0px;
+    cursor: pointer;
+    left:10px;
+    width: 25%;
+} */
+.Timage{
+    width:100%;
+    background-image:url('beach.jpg');
+    height:400px;
+    float:top;
+    position:relative;
+    top:125px;
+    
+    background-position : center;
+    background-size: cover;
+
+}
+.booking{
+    width:100%;
+    height:215px;
+    background-image:url('bgbeach1.jpg');
+    background-position:center;
+    background-size: cover;
+    position: relative;
+    top:125px;
+    
+    
+}
+.Reservation{
+    text-align: center;
+    font-size:30px;
+    position: relative;
+    top:25px;
+
+}
+.dates{
+    text-align: center;
+    font-size: 20px;
+}
+.button {
+    background-color: #010507;
+    border: none;
+    color: white;
+font-size: 25px;
+padding: 10px 30px;
+text-align: center;}
+.table{
+    
+    margin-left:125px;
+    margin-right: 35px;
+    margin-top: 0px;
+    position: relative;
+    top:0%;
+}
+.text{
+    position:relative;
+    top:180px;
+    left :3px;
+    text-align: center;
+}
+.address{
+    width:100%;
+    height:200px;
+    background-image:url('bgbeach1.jpg');
+    background-position:center;
+    background-size: cover;
+    position: relative;
+    top:195px;
+    text-align:center;
+}
+.footer{
+    font-size: 25px;
+    color: rgb(14, 1, 1);
+    text-align: center;
+    position: relative;
+    top:15px;
+}
+.street-address{
+    font-size: 18px;
+    color: rgb(14, 1, 1);
+    text-align: center;
+    font-style:unset;
+}
+.locality{font-size: 18px;
+    color: rgb(14, 1, 1);
+    text-align: center;
+    font-style:unset;
+}
+.country-name{ font-size: 18px;
+    color: rgb(14, 1, 1);
+    text-align: center;
+    font-style:unset;
+}
+.value{ font-size: 18px;
+    color: rgb(14, 1, 1);
+    text-align: center;
+    font-style:unset;}
+.Aaddress{
+        width:100%;
+        height:200px;
+        background-image:url('bgbeach1.jpg');
+        background-position:center;
+        background-size: cover;
+        position: relative;
+        top:850px;
+        text-align:center;
+    }
+
+  
